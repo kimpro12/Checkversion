@@ -14,9 +14,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.UUID;
-import java.util.concurrent.TimeUnit;
-
 
 public class Checkversion extends JavaPlugin implements Listener {
 
@@ -38,7 +35,6 @@ public class Checkversion extends JavaPlugin implements Listener {
     public void onJoin(PlayerJoinEvent event) {
             Player p = event.getPlayer();
             int version = Via.getPlatform().getApi().getPlayerVersion(p);
-            TimeUnit.SECONDS.sleep(2);
             if (version == 47) {
                 Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA + "[Checkversion] Version of " + p.getName() + " is 1.8");
             }
