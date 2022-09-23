@@ -36,7 +36,6 @@ public class Checkversion extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
-        try {
             Player p = event.getPlayer();
             int version = Via.getPlatform().getApi().getPlayerVersion(p);
             TimeUnit.SECONDS.sleep(2);
@@ -139,10 +138,6 @@ public class Checkversion extends JavaPlugin implements Listener {
             if (version == 760) {
                 Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA + "[Checkversion] Version of " + p.getName() + " is 1.19.1 or 1.19.2");
             }
-        }
-        catch (Exception ex) {
-            ex.printStackTrace();
-        }
     }
 
     @Override
