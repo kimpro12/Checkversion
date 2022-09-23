@@ -1,0 +1,16 @@
+name: Checkversion
+version: '${project.version}'
+main: me.checkversion.Checkversion
+authors: [ Kim ]
+description: CHecking Version made by Kim
+api-version: 1.13
+depend: [ViaVersion]
+commands:
+  checkversion:
+    description: Checkversion
+    usage: /checkversion
+    permission: Checkversion.checkversion
+    permission-message: U don't have permission
+permissions:
+  Checkversion.checkversion:
+    default: op
